@@ -1,6 +1,6 @@
-package com.next.spring.boot.demo.main;
+package com.next.learning.spring.boot.main;
 
-import com.next.spring.boot.demo.controller.HelloController;
+import com.next.learning.spring.boot.controller.HelloController;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -33,7 +33,7 @@ public class NextSpringBootDemoApplicationTest {
     }
 
     @Test
-    public void test() throws Exception {
+    public void hello() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/hello").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().string(equalTo("Hello U")));
